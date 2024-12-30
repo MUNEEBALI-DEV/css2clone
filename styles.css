@@ -46,7 +46,7 @@ button {
 /* Header */
 
 .header {
-  height: 15vh;
+  height: 120px;
   width: 98%;
   margin-inline: auto;
   justify-content: space-between;
@@ -421,7 +421,7 @@ button {
 
 .footerEnd {
   background-color: rgb(31, 31, 31);
-  height: 5vh;
+  height: 35px;
   text-align: center;
   color: #a3a3a3;
   margin-block: 20px;
