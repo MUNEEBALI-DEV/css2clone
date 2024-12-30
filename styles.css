@@ -56,7 +56,7 @@ button {
   background-color: var(--black);
 }
 .logo > img {
-  width: 18vh;
+  width: 100px;
   padding-left: 20px;
 }
 
