@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+body {
+  background-color: rgb(31, 31, 31);
+}
+
+/* declaring repeated values */
+
+:root {
+  --white: rgb(253, 253, 253);
+  --border-col: rgb(26, 172, 162);
+  --light-blue-col: rgb(26, 172, 162);
+  --black: rgb(20, 20, 20);
+  --pink: rgb(247, 160, 156);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+a:hover,
+li:hover {
+  color: var(--border-col);
+}
+button {
+  cursor: pointer;
+}
+
+/* Header */
+
+.header {
+  height: 15vh;
+  width: 98%;
+  margin-inline: auto;
+  justify-content: space-between;
+  border: 2px solid var(--border-col);
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: var(--black);
+}
+.logo > img {
+  width: 18vh;
+  padding-left: 20px;
+}
+
+.navbar {
+  column-gap: 10px;
+}
+.nav-links {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.nav-links::after {
+  content: " ";
+  height: 2px;
+  width: 0%;
+  background: var(--border-col);
+  display: block;
+  margin-top: 5px;
+  margin-inline: auto;
+  transition: all 0.3s ease-in-out;
+}
+.nav-links:hover::after {
+  width: 50%;
+}
+
+.quote {
+  color: var(--border-col);
+  margin-right: 30px;
+  border: 1px solid var(--border-col);
+  padding: 5px 15px;
+  font-weight: 400;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.quote:hover {
+  transform: translateY(-5px);
+}
+
+ .header .navbar i {
+  display: none;
+  visibility: hidden;
+
+}
+
+/* main */
+
+.main {
+  width: 90%;
+  margin-inline: auto;
+  padding-bottom: 50px;
+}
+
+/* Project Text */
+
+.write {
+  margin-top: 50px;
+  color: var(--white);
+}
+.explore {
+  font-size: 24px;
+}
+.projects {
+  font-size: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-col);
+}
+
+/* Circle Button */
+.circle-btn {
+  margin: 20px;
+}
+.c-btn {
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 9999px;
+  padding: 10px 15px;
+  margin: 10px;
+  background-color: var(--light-blue-col);
+  color: var(--white);
+  border: 1px solid var(--light-blue-col);
+}
+
+.cbtn-2 {
+  background-color: var(--black);
+  transition: 0.1s;
+}
+.cbtn-2:hover {
+  background-color: var(--light-blue-col);
+}
+
+/* sub-navbar */
+
+.sub-navbar {
+  margin-top: 20px;
+}
+.sub-links {
+  font-size: 17px;
+  font-weight: 400;
+  padding: 5px;
+  margin-right: 3px;
+  background-color: var(--white);
+  color: var(--light-blue-col);
+  border: none;
+  outline: none;
+  transition: 0.1s;
+  margin-top: 10px;
+}
+.sub-links:hover {
+  background-color: var(--light-blue-col);
+  color: var(--white);
+}
+.sub-links-1 {
+  background-color: var(--light-blue-col);
+  color: var(--white);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+.sub-links-4 {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+/* cards */
+
+.cards-a,
+.cards-b {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 10px;
+}
+.card {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 43vw;
+  margin: 7px;
+  border: none;
+  outline: none;
+  color: rgb(224, 224, 224);
+  border-radius: 20px;
+  padding: 20px;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  );
+  cursor: pointer;
+}
+.card:hover {
+  color: var(--white);
+}
+.card-heading {
+  font-size: 30px;
+  font-weight: 600;
+}
+.card-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+.card-img {
+  height: auto;
+  width: 100%;
+  margin-block: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+.card-img:hover {
+  transform: scale(1.05);
+}
+.viewmore {
+  text-align: center;
+  color: rgb(26, 172, 162);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.card-1 {
+  background-color: var(--pink);
+}
+.card-2 {
+  background-color: var(--pink);
+}
+.card-3 {
+  background-color: var(--pink);
+}
+.card-4 {
+  background-color: var(--pink);
+}
+.card-5 {
+  background-color: rgb(250, 198, 39);
+}
+.card-6 {
+  background-color: rgb(124, 70, 137);
+}
+.card-7 {
+  background-color: rgb(37, 93, 184);
+}
+.card-8 {
+  background-color: rgb(79, 176, 188);
+}
+.card-9 {
+  background-color: rgb(37, 93, 184);
+}
+.card-10 {
+  background-color: rgb(79, 176, 188);
+}
+.card-11 {
+  background-color: var(--pink);
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--black);
+}
+.details {
+  width: 90%;
+  color: var(--white);
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 30px;
+  padding-right: 10rem;
+  padding-left: 2rem;
+  flex-wrap: nowrap;
+}
+
+.ft-upper::after {
+  content: " ";
+  height: 2px;
+  width: 90%;
+  background: rgb(55, 54, 54);
+  display: block;
+  margin-top: 10px;
+  margin-inline: auto;
+}
+.dt {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.Location,
+.Contact,
+.Email {
+  position: relative;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.Location::after,
+.Contact::after,
+.Email::after {
+  position: absolute;
+  top: 70%;
+  margin-top: 3px;
+  left: 33%;
+  content: "Pakistan";
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(163, 163, 163);
+}
+
+.Contact::after {
+  content: "+92 3071991737";
+  left: 17%;
+}
+.Email::after {
+  content: "smashcode.dev@gmail.com";
+  left: 45%;
+}
+
+/* <!-- Section after footer line --> */
+
+.footer-inter {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+}
+
+/* First grid section */
+
+.fs1,
+.fs2{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 10%;
+  margin-bottom: 40px;
+  padding-right: 2rem;
+
+}
+.lg-2 {
+  transform: translateX(-31px);
+}
+
+.fs1 p:nth-child(2) {
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+  font-weight: 400;
+  flex-wrap: wrap;
+  margin-block: 10px;
+}
+.fs1 p:nth-child(3) {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 400;
+  margin-block: 10px;
+}
+
+.pseb{
+  width:250px;
+}
+/* Second grid section */
+
+.fs2 {
+  color: var(--white);
+  font-weight: 400;
+}
+.fs2 > p:nth-child(3) {
+  font-size: 25px;
+  margin-block: 10px;
+}
+.qHead {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.qHead::after {
+  content: " ";
+  height: 2px;
+  width: 20%;
+  background: var(--border-col);
+  display: block;
+  margin-top: 10px;
+}
+.googleRw{
+  width: 150px;
+}
+
+.q-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-block: 10px;
+  margin-bottom: 20px;
+  gap: 10px;
+  transition: all 0.2s ease-out;
+}
+.q-links > a {
+  color: rgb(163, 163, 163);
+}
+.q-links > a:hover {
+  color: var(--border-col);
+}
+
+.footerEnd {
+  background-color: rgb(31, 31, 31);
+  height: 5vh;
+  text-align: center;
+  color: #a3a3a3;
+  margin-block: 20px;
+  white-space: wrap;
+}
+.footerEnd a {
+  color: var(--border-col);
+}
+
+.qHead2 {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.fs3{
+    grid-column: span 1;
+}
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+.social-icons i {
+    font-size: 24px;
+    color: #fff;
+    width: 50px;
+     height: 50px;
+   line-height: 50px;
+     text-align: center;
+    border-radius: 50%;
+    transition: transform 0.2s ease; 
+}
+
+
+.fa-facebook { background-color: #1877F2; }
+.fa-twitter { background-color: #1DA1F2; }
+.fa-github { background-color: #000000; }
+.fa-linkedin { background-color: #0A66C2; }
+.fa-google { background-color: #EA4335; }
+.fa-instagram { background-color: #E4405F; }
+.fa-youtube { background-color: #FF0000; }
+.fa-medium { background-color: #00AB6C; }
+.fa-tiktok { background-color: #010101; }
+.fa-pinterest { background-color: #E60023; }
+.fa-quora { background-color: #B92B27; }
+.fa-wechat { background-color: #1AAD19; }
+
+
+.social-icons i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
