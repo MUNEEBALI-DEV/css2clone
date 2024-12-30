@@ -395,7 +395,7 @@ button {
 .qHead::after {
   content: " ";
   height: 2px;
-  width: 20%;
+  width: 70px;
   background: var(--border-col);
   display: block;
   margin-top: 10px;
