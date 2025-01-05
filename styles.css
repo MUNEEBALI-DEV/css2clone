@@ -46,7 +46,7 @@ button {
 /* Header */
 
 .header {
-  height: 120px;
+  height: 90px;
   width: 98%;
   margin-inline: auto;
   justify-content: space-between;
@@ -92,14 +92,63 @@ button {
   border-radius: 100px;
   transition: all 0.3s ease-in-out;
 }
+
+/* This is for side bar */
+.body {
+  height: auto;
+  width: 100%;
+}
+.sideBar {
+  height: 100vh;
+  width: 250px;
+  background-color: rgb(20, 20, 20);
+  position: fixed;
+  top: 0px;
+  left: -100%;
+  border-right: 2px solid rgb(26, 172, 162);
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+.active-sideBar{
+  left: 0px;
+}
+.sideBar-logo-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
+.sideBar-logo {
+  width: 100px;
+}
+.sideBar-link{
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.sideBar-links{
+  color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.proj-blue{
+  background-color: rgb(26, 172, 162);
+   
+}
 .quote:hover {
   transform: translateY(-5px);
 }
 
- .header .navbar i {
+.header .navbar i {
   display: none;
   visibility: hidden;
-
 }
 
 /* main */
@@ -151,7 +200,8 @@ button {
 /* sub-navbar */
 
 .sub-navbar {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 .sub-links {
   font-size: 17px;
@@ -182,14 +232,18 @@ button {
 
 /* cards */
 
-.cards-a,
-.cards-b {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 30px;
-  gap: 10px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
+
+.card-a {
+  grid-column: span 1;
+}
+.card-b {
+  grid-column: span 1;
+}
+
 .card {
   color: var(--white);
   display: flex;
@@ -215,6 +269,7 @@ button {
 .card-heading {
   font-size: 30px;
   font-weight: 600;
+  align-self: flex-start;
 }
 .card-text {
   font-size: 20px;
@@ -348,14 +403,13 @@ button {
 /* First grid section */
 
 .fs1,
-.fs2{
+.fs2 {
   display: flex;
   flex-direction: column;
   justify-content: start;
   margin-left: 10%;
   margin-bottom: 40px;
   padding-right: 2rem;
-
 }
 .lg-2 {
   transform: translateX(-31px);
@@ -375,8 +429,8 @@ button {
   margin-block: 10px;
 }
 
-.pseb{
-  width:250px;
+.pseb {
+  width: 250px;
 }
 /* Second grid section */
 
@@ -400,7 +454,7 @@ button {
   display: block;
   margin-top: 10px;
 }
-.googleRw{
+.googleRw {
   width: 150px;
 }
 
@@ -436,43 +490,64 @@ button {
   font-weight: 400;
 }
 
-.fs3{
-    grid-column: span 1;
+.fs3 {
+  grid-column: span 1;
 }
-.social-icons{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 30px;
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
 }
 .social-icons i {
-    font-size: 24px;
-    color: #fff;
-    width: 50px;
-     height: 50px;
-   line-height: 50px;
-     text-align: center;
-    border-radius: 50%;
-    transition: transform 0.2s ease; 
+  font-size: 24px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
 }
 
-
-.fa-facebook { background-color: #1877F2; }
-.fa-twitter { background-color: #1DA1F2; }
-.fa-github { background-color: #000000; }
-.fa-linkedin { background-color: #0A66C2; }
-.fa-google { background-color: #EA4335; }
-.fa-instagram { background-color: #E4405F; }
-.fa-youtube { background-color: #FF0000; }
-.fa-medium { background-color: #00AB6C; }
-.fa-tiktok { background-color: #010101; }
-.fa-pinterest { background-color: #E60023; }
-.fa-quora { background-color: #B92B27; }
-.fa-wechat { background-color: #1AAD19; }
-
+.fa-facebook {
+  background-color: #1877f2;
+}
+.fa-twitter {
+  background-color: #1da1f2;
+}
+.fa-github {
+  background-color: #000000;
+}
+.fa-linkedin {
+  background-color: #0a66c2;
+}
+.fa-google {
+  background-color: #ea4335;
+}
+.fa-instagram {
+  background-color: #e4405f;
+}
+.fa-youtube {
+  background-color: #ff0000;
+}
+.fa-medium {
+  background-color: #00ab6c;
+}
+.fa-tiktok {
+  background-color: #010101;
+}
+.fa-pinterest {
+  background-color: #e60023;
+}
+.fa-quora {
+  background-color: #b92b27;
+}
+.fa-wechat {
+  background-color: #1aad19;
+}
 
 .social-icons i:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-
+  transform: scale(1.1);
+  cursor: pointer;
 }
